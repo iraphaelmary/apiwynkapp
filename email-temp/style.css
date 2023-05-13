@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --bg: #f5f5f5;
+    --text-color: #030303;
+    --link-color: #1877f2;
+    --subscribe-color: #7b7b7b;
+    --title-bg: #eeeeee;
+    --value-bg: #f7f7f7;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    padding: .3rem .1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', 'Roboto', 'Nunito', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: 'Poppins' !important;
+    font-size: .85rem;
+    line-height: 175%;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    width: 100%;
+    height: 248px;
+    background-image: url('./assets/BlueBackground.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -35px;
+}
+
+.header-content h2 {
+    font-size: 20px;
+    font-family: 'Poppins' !important;
+    font-weight: 700;
+    color: #fff;
+    margin: -15px 0 0 -10px;  
+}
+
+main {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: -85px;
+    padding: 0 10px;
+}
+
+.main__content {
+    width: 620px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.welcome__info {
+    padding: 1.5rem 0 0 1.5rem;
+    width: 332px;
+}
+
+.welcome__info > h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: 'Poppins' !important;
+    padding-bottom: 1rem;
+}
+
+.transaction__info {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+.transaction__info span {
+    width: 200px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.582);
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 1.5rem 0;
+}
+
+section > aside {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+section > aside h2 {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    display: flex;
+}
+
+.subscribe {
+    width: 100%;
+    padding: 2rem 6rem;
+}
+
+.subscribe p {
+    color: var(--subscribe-color);
+    font-weight: 400;
+    font-size: .8rem;
+    text-align: center;
+}
+
+section > aside h2:nth-child(1){
+    background-color: var(--title-bg);
+}
+
+section > aside h2:nth-child(2){
+    background-color: var(--value-bg);
+    font-weight: unset;
+}
+
+footer {
+    /* background-color: #000; */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url('./assets/BlueBackground.png');
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+footer p {
+    color: white;
+    font-weight: 700;
+    font-size: .85rem;
+    text-align: center;
+}
+
+/* ipad*/
+@media screen and (max-width: 920px) {
+    .wrapper {
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .header-content {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .header-content h2 {
+        font-size: 1.2rem;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    
+    p {
+        font-size: 0.80rem;
+        line-height: 195%;
+    }
+
+    .welcome__info {
+        padding: 1rem 0 0 1rem;
+    }
+    
+    section > aside h2 {
+        padding: 1rem;
+        font-size: 0.80rem;
+    }
+
+    .subscribe {
+        padding: 1.3rem;
+    }
+
+    footer {
+        justify-content: center;
+        padding: 3rem 1rem;
+    }
+
+    footer section {
+        text-align: center;
+    }
+
+    footer section:nth-child(2){
+        margin-top: 1rem;
+    }
+
+}
+
+/*iphone 12 pro max*/
+
+@media screen and (max-width: 520px) {
+    
+    .main__content {
+        width: 100%;    
+    }
+
+}
+
+/* iphone xr*/
+
+@media screen and (max-width: 320px){
+
+    .header-content h2 {
+        font-size: 1rem; 
+    }
+
+    .main__content {
+        width: 100%;
+    }
+    
+    .welcome__info {
+        width: 100%;
+    }
+
+    .transaction__info {
+        font-size: .8rem;
+    }
+
+    footer section:nth-child(2) img {
+        width: 140px;
+    }
+}
